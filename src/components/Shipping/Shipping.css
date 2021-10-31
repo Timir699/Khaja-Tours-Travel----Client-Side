@@ -1,0 +1,9 @@
+.shipping {
+    margin-top: 90px;
+    /* min-height: 71vh; */
+}
+@media (max-width: 767.98px) { 
+    .shipping {
+        margin-top: 150px;
+    }
+ }

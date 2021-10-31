@@ -1,0 +1,22 @@
+.newService {
+    height: 70vh;
+    margin-top: 100px;
+}
+.newService h2 {
+    margin-bottom: 50px;
+}
+.newService input {
+    width: 60%;
+    margin-bottom: 20px;
+    border: 1px solid #198754;
+    border-radius: 5px;
+}
+
+.newService .submit {
+    background: #4bd695;
+    color: #fff;
+    transition: all linear .3s;
+}
+.newService .submit:hover {
+    background: #198754;
+}

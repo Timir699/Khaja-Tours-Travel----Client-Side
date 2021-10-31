@@ -1,0 +1,13 @@
+.cart img {
+    width: 100px !important;
+}
+.cart {
+    margin-top: 50px;
+    min-height: 78vh;
+}
+@media (max-width: 767.98px) { 
+    .summary {
+        text-align: center !important;
+    
+    }
+ }

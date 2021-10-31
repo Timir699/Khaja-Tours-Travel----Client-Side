@@ -1,0 +1,12 @@
+.about .main-about img{
+    border-radius: 5px;
+}
+.about .about-content p{
+    margin-top: 150px;
+}
+@media (max-width: 620px) { 
+    .about .about-content p {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
