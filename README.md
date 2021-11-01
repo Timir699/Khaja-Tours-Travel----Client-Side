@@ -1,6 +1,6 @@
-# Khaja Tours & Travel
+# Khaja Tours & Travel -- Client-Side
 
-Live Link:  [Khaja Tours & Travel](https://khaja-travels.web.app/)
+Live Link: [Khaja Tours & Travel](https://khaja-travels.web.app/)
 
 About the Site: 
 
