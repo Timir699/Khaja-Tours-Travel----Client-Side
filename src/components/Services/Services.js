@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 import useCartProducts from '../../hooks/useCartProducts';
-import useServices from '../../hooks/useServices';
 import './Services.css'
 import { CgDetailsMore } from 'react-icons/cg';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -16,23 +15,23 @@ const Services = () => {
 
     const display = useContext(DisplayServicesContext)
 
-    const {displayServices, setDisplayServices} = display
+    const {displayServices} = display
 
     // component states
     
     // const [isClicked, setIsClicked] = useState(false)
 
     // hooks
-    const AllServices = useServices()
+    // const AllServices = useServices()
     const cartProducts = useCartProducts()
-    console.log(AllServices);
+    // console.log(AllServices);
     const { allCartProducts, setAllCartProducts, cartCounter,
         setCartCounter } = cartProducts
 
 
     // add to cart functionality
     const ServiceAddToCart = (service) => {
-        fetch('http://localhost:5000/api/orders', {
+        fetch('https://frightening-pirate-52052.herokuapp.com/orders', {
             method: "POST",
             headers:{
                 'content-type': 'application/json' 
@@ -47,9 +46,9 @@ const Services = () => {
         alert('service added to my orders Successfully')
     }
     // handling side effects
-    useEffect(() => {
-        setDisplayServices(AllServices)
-    }, [AllServices])
+    // useEffect(() => {
+    //     setDisplayServices(AllServices)
+    // }, [AllServices])
 
     return (
         <div className="services">

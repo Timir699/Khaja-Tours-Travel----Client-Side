@@ -1,30 +1,34 @@
 import React, { useContext } from 'react';
 import '../NewService/NewService.css'
 import { useForm } from "react-hook-form";
-import { Button } from 'react-bootstrap';
 import { DisplayServicesContext } from '../../context/DisplayServicesProvider';
 
 const NewService = () => {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset  } = useForm();
 
     const display = useContext(DisplayServicesContext)
 
-    const {displayServices, setDisplayServices} = display
+    const { setDisplayServices} = display
 
-    const onSubmit = data => {
+    const onSubmit = formResult => {
         // console.log(data)
-        fetch('http://localhost:5000/api/businessPackages', {
+        fetch('https://frightening-pirate-52052.herokuapp.com/businessPackages', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json' 
             },
-            body: JSON.stringify(data) 
+            body: JSON.stringify(formResult) 
         })
         .then( data => {
-            fetch('http://localhost:5000/api/businessPackages')
+            fetch('https://frightening-pirate-52052.herokuapp.com/businessPackages')
             .then( res => res.json())
-            .then( data => setDisplayServices(data))
+            .then( data => {
+                console.log(data);
+                setDisplayServices(data)
+                reset()
+            })
+            
         })
     };
     return (

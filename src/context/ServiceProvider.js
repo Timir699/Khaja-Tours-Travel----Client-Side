@@ -8,9 +8,8 @@ const ServiceProvider = ({ children }) => {
 
     const [allServices, setAllServices] = useState([])
 
-
     useEffect(() => {
-        fetch("http://localhost:5000/api/businessPackages")
+        fetch("https://frightening-pirate-52052.herokuapp.com/businessPackages")
             .then(res => res.json())
             .then(data => setAllServices(data))
     }, [])
